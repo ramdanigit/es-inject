@@ -43,7 +43,9 @@ async function getData(connectionParam, callback) {
 async function getDataSelect(connectionParam, selectValue, callback) {
   try {
     const result = await connectionParam.execute(
-      `SELECT * FROM VIEW_JSON_RESULTS_MSISDN_V01 WHERE MSISDN_REQUEST_ID > ${selectValue}`,
+      `SELECT * FROM VIEW_JSON_RESULTS_MSISDN_V01 WHERE MSISDN_REQUEST_ID > ${selectValue} AND MSISDN_REQUEST_ID < ${
+        parseInt(selectValue) + 5
+      }`,
       // `SELECT *
       //   FROM JSON_RESULTS_IMEI_V01
       //   WHERE IS_ES = :yesno
