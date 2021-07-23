@@ -2,10 +2,10 @@
   "name": "es-inject",
   "version": "1.0.0",
   "description": "elastic search get data blob and insert to elastic",
-  "main": "dist/server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,9 +16,11 @@
   "author": "Dani Ramdani",
   "license": "ISC",
   "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0",
     "elasticsearch": "^16.7.2",
     "express": "^4.17.1",
-    "express-form-data": "^2.0.17"
+    "express-form-data": "^2.0.17",
+    "oracledb": "^5.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
